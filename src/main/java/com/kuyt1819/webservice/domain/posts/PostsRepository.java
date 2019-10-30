@@ -1,4 +1,4 @@
-package com.kuyt1819.webservice.domain;
+package com.kuyt1819.webservice.domain.posts;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
