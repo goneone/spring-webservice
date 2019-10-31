@@ -2,6 +2,7 @@ package com.kuyt1819.webservice.web;
 
 import org.springframework.stereotype.Controller;
 
+
 import org.springframework.web.bind.annotation.GetMapping;
 
 import lombok.AllArgsConstructor;
