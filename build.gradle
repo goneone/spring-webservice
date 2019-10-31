@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.0.RELEASE'
+	id 'org.springframework.boot' version '1.5.10.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
 }
@@ -29,7 +29,14 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
-	compile 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.3.0'
+	
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.1.0' 
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.1.0' 
+	testCompileOnly 'junit:junit:4.12' 
+	testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.1.0'
+
+	compile 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.2.15'
+	
 }
 
 test {
