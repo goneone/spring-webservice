@@ -26,9 +26,10 @@ public class PostServiceTest {
     public void cleanup () {
         postsRepository.deleteAll();
     }
-
+    
+    //Dto데이터가_posts테이블에_저장된다
     @Test
-    public void Dto데이터가_posts테이블에_저장된다 (){
+    public void  savePosts(){
         //given
     	 PostsSaveRequestDto dto = PostsSaveRequestDto.builder()
                  .author("jojoldu@gmail.com")
