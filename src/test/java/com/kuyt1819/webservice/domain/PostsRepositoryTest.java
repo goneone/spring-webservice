@@ -49,8 +49,8 @@ public class PostsRepositoryTest {
         //given
         LocalDateTime now = LocalDateTime.now();
         postsRepository.save(Posts.builder()
-                .title("�׽�Ʈ �Խñ�")
-                .content("�׽�Ʈ ����")
+                .title("테스트 게시글")
+                .content("테스트 본문")
                 .author("jojoldu@gmail.com")
                 .build());
         //when
