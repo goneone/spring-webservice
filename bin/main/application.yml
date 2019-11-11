@@ -1,21 +1,21 @@
 spring:
   profiles:
-    active: local # 기본 환경 선택 
+    active: local # 기본 환경 선택
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 
 # local 환경
 ---
 spring:
-  datasource: 
-    url: jdbc:mysql://localhost:3307/springwebservice?useTimezone=true&serverTimezone=UTC
-    username: root 
-    password: root 
-  jpa: 
-    database-platform: org.hibernate.dialect.MySQLDialect 
-    hibernate: 
-      format_sql: true
-      ddl-auto: update 
-      generate-ddl: true 
-      show-sql: true
-
-  
-      
+  profiles: local
+  datasource:
+    data: classpath:data-h2.sql # 시작할때 실행시킬 script
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
