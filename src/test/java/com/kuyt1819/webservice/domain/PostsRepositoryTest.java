@@ -2,6 +2,7 @@ package com.kuyt1819.webservice.domain;
 
 import static org.hamcrest.CoreMatchers.is;
 
+
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
@@ -30,9 +31,10 @@ public class PostsRepositoryTest {
     public void cleanup() {
         postsRepository.deleteAll();
     }
-
+    
+    //게시글저장_불러오기() 
     @Test
-    public void 게시글저장_불러오기() {
+    public void loadBoard() {
         //given
         postsRepository.save(Posts.builder()
                 .title("테스트 게시글")
