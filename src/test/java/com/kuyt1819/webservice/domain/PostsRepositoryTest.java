@@ -28,29 +28,29 @@ public class PostsRepositoryTest {
     @After
     public void cleanup() {
         /** 
-        ÀÌÈÄ Å×½ºÆ® ÄÚµå¿¡ ¿µÇâÀ» ³¢Ä¡Áö ¾Ê±â À§ÇØ 
-        Å×½ºÆ® ¸Þ¼Òµå°¡ ³¡³¯¶§ ¸¶´Ù respository ÀüÃ¼ ºñ¿ì´Â ÄÚµå
+        ï¿½ï¿½ï¿½ï¿½ ï¿½×½ï¿½Æ® ï¿½Úµå¿¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ê±ï¿½ ï¿½ï¿½ï¿½ï¿½ 
+        ï¿½×½ï¿½Æ® ï¿½Þ¼Òµå°¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ respository ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½
         **/
         postsRepository.deleteAll();
     }
 
 	/*
-	 * @Test public void °Ô½Ã±ÛÀúÀå_ºÒ·¯¿À±â() { //given postsRepository.save(Posts.builder()
-	 * .title("Å×½ºÆ® °Ô½Ã±Û") .content("Å×½ºÆ® º»¹®") .author("jojoldu@gmail.com") .build());
+	 * @Test public void ï¿½Ô½Ã±ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½() { //given postsRepository.save(Posts.builder()
+	 * .title("ï¿½×½ï¿½Æ® ï¿½Ô½Ã±ï¿½") .content("ï¿½×½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½") .author("jojoldu@gmail.com") .build());
 	 * 
 	 * //when List<Posts> postsList = postsRepository.findAll();
 	 * 
 	 * //then Posts posts = postsList.get(0); assertThat(posts.getTitle(),
-	 * is("Å×½ºÆ® °Ô½Ã±Û")); assertThat(posts.getContent(), is("Å×½ºÆ® º»¹®")); }
+	 * is("ï¿½×½ï¿½Æ® ï¿½Ô½Ã±ï¿½")); assertThat(posts.getContent(), is("ï¿½×½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½")); }
 	 */
     
     @Test
-    public void BaseTimeEntity_µî·Ï () {
+    public void ê²Œì‹œê¸€ì €ìž¥_ë¶ˆëŸ¬ì˜¤ê¸°() {
         //given
         LocalDateTime now = LocalDateTime.now();
         postsRepository.save(Posts.builder()
-                .title("Å×½ºÆ® °Ô½Ã±Û")
-                .content("Å×½ºÆ® º»¹®")
+                .title("ï¿½×½ï¿½Æ® ï¿½Ô½Ã±ï¿½")
+                .content("ï¿½×½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½")
                 .author("jojoldu@gmail.com")
                 .build());
         //when
