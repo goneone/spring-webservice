@@ -17,8 +17,8 @@ public class WebControllerTest {
     @Autowired
     private TestRestTemplate restTemplate;
 
-    //메인페이지 로딩 
     @Test
+    //메인페이지 로딩 
     public void loadMainPage() {
         //when
         String body = this.restTemplate.getForObject("/", String.class);

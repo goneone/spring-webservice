@@ -1,11 +1,11 @@
 plugins {
-	id "org.springframework.boot" version "2.2.1.RELEASE"
+	id 'org.springframework.boot' version '1.5.10.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
 }
 
 group = 'com.kuyt1819'
-version = '0.0.2-SNAPSHOT'
+version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 configurations {
@@ -33,7 +33,7 @@ dependencies {
 	
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.1.0' 
 	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.1.0' 
-	testCompileOnly 'junit:junit:5.1.0' 
+	testCompileOnly 'junit:junit:4.12' 
 	testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.1.0'
 
 	compile 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.2.15'
