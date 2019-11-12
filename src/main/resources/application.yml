@@ -3,8 +3,8 @@ spring:
     maria:
       jdbc-url: jdbc:mariadb://springboot-webservice.ca3w67jmyfwa.ap-northeast-2.rds.amazonaws.com:3306/webservice?useUnicode=yes&characterEncoding=UTF-8
       driver-class-name: org.mariadb.jdbc.Driver
-      username: kuyt1819
-      password: !187f5391
+      username: kuyt1zxcx819
+      password: !187fzxc5391
   jpa:
     properties:
       hibernate:
