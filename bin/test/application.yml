@@ -1,10 +1,4 @@
 spring:
-  profiles:
-    active: local # 기본 환경 선택 
-
-# local 환경
----
-spring:
   data:
     maria:
       jdbc-url: springboot-webservice.ca3w67jmyfwa.ap-northeast-2.rds.amazonaws.com:3306/webservice?useUnicode=yes&characterEncoding=UTF-8
