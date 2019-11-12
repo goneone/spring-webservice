@@ -1,11 +1,21 @@
-# Test
 spring:
   profiles:
-    active: local # 기본 환경 선택
+    active: local # 기본 환경 선택 
 
 # local 환경
 ---
 spring:
-  profiles: local
-  jpa:
-    show-sql: true
+  maria:
+      jdbc-url: springboot-webservice.ca3w67jmyfwa.ap-northeast-2.rds.amazonaws.com
+      driver-class-name: org.mariadb.jdbc.Driver
+      username: kuyt1819
+      password: !187f5391
+  jpa: 
+    database-platform: org.hibernate.dialect.MySQLDialect 
+    hibernate: 
+      format_sql: true
+      ddl-auto: update 
+      generate-ddl: true 
+      show-sql: true
+  
+      
