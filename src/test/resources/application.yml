@@ -4,7 +4,7 @@ spring:
       jdbc-url: jdbc:mariadb://springboot-webservice.ca3w67jmyfwa.ap-northeast-2.rds.amazonaws.com/webservice?useUnicode=yes&characterEncoding=UTF-8
       driver-class-name: org.mariadb.jdbc.Driver
       username: kuyt1819
-      password: !187f5391
+      password: 187f5391
   jpa:
     properties:
       hibernate:
