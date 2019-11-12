@@ -5,10 +5,11 @@ spring:
       driver-class-name: org.mariadb.jdbc.Driver
       username: kuyt1819
       password: !187f5391
-  jpa: 
-    database-platform: org.hibernate.dialect.MySQLDialect 
-    hibernate: 
-      format_sql: true
-      ddl-auto: update 
-      generate-ddl: true 
-      show-sql: true
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        temp:
+          use_jdbc_metadata_defaults: false
+    generate-ddl: true
