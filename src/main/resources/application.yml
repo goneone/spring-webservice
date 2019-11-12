@@ -5,7 +5,8 @@ spring:
 # local 환경
 ---
 spring:
-  maria:
+  data:
+    maria:
       jdbc-url: springboot-webservice.ca3w67jmyfwa.ap-northeast-2.rds.amazonaws.com:3306/webservice?useUnicode=yes&characterEncoding=UTF-8
       driver-class-name: org.mariadb.jdbc.Driver
       username: kuyt1819
