@@ -32,9 +32,9 @@ public class PostsRepositoryTest {
         postsRepository.deleteAll();
     }
     
-    //게시글저장_불러오기() 
     @Test
     public void loadBoard() {
+    	//게시글저장_불러오기()
         //given
         postsRepository.save(Posts.builder()
                 .title("테스트 게시글")
@@ -51,15 +51,15 @@ public class PostsRepositoryTest {
         assertThat(posts.getContent(), is("테스트 본문"));
     }
     
-    //BaseTimeEntity_등록 ()
     @Test
     public void registerBaseTimeEntity() {
-        //given
+    	//BaseTimeEntity_등록 ()
+    	//given
         LocalDateTime now = LocalDateTime.now();
         postsRepository.save(Posts.builder()
                 .title("테스트 게시글")
                 .content("테스트 본문")
-                .author("jojoldu@gmail.com")
+                .author("kuyt1819@gmail.com")
                 .build());
         //when
         List<Posts> postsList = postsRepository.findAll();

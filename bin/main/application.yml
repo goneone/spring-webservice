@@ -1,15 +1,17 @@
 spring:
-  data:
-    maria:
-      jdbc-url: jdbc:mariadb://springboot-webservice.ca3w67jmyfwa.ap-northeast-2.rds.amazonaws.com:3306/webservice?useUnicode=yes&characterEncoding=UTF-8
-      driver-class-name: org.mariadb.jdbc.Driver
-      username: kuyt1819
-      password: 187f5391
+  profiles:
+    active: local # 기본 환경 선택
+
+# local 환경
+---
+spring:
+  profiles: local
+  datasource:
+    data: classpath:data-h2.sql # 시작할때 실행시킬 script
   jpa:
-    properties:
-      hibernate:
-        show_sql: true
-        format_sql: true
-        temp:
-          use_jdbc_metadata_defaults: false
-    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
