@@ -7,5 +7,5 @@ then
 
 else
 
-echo "ssibal"
+echo "why so serius"
 
