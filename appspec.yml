@@ -6,6 +6,6 @@ files:
 
 hooks:
   AfterInstall: # 배포가 끝나면 아래 명령어를 실행
-    - location: /home/ec2-user/app/travis/build/scripts/execute-deploy.sh
+    - location: /scripts/execute-deploy.sh
       timeout: 180
  
