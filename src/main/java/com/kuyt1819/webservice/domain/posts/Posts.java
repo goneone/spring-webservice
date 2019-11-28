@@ -6,7 +6,10 @@ import javax.persistence.Column;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
 
 import com.kuyt1819.webservice.domain.BaseTimeEntity;
 
@@ -19,10 +22,23 @@ import lombok.NoArgsConstructor;
 @Entity
 //public class Posts extends BaseTimeEntity {
 public class Posts {
-    @Id
-    @GeneratedValue
-    private Long id;
+	/*
+	 * @Id
+	 * 
+	 * @GeneratedValue private Long id;
+	 */
 
+	@Id
+	@GeneratedValue(
+	    strategy= GenerationType.AUTO,
+	    generator="native"
+	)
+	@GenericGenerator(
+	    name = "native",
+	    strategy = "native"
+	)
+	private Long id;
+	
     @Column(length = 500, nullable = false)
     private String title;
 
