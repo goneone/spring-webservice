@@ -5,6 +5,9 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect # dialect: org.hibernate.dialect.MariaDB53Dialect
+  mustache:
+    suffix: .html
+    prefix: classpath:/static/    
 # local 환경
 ---
 spring:
