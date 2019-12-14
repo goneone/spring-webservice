@@ -13,6 +13,7 @@ var main = {
 				content 	: 		$('#content').val(),
 			};
 			
+			console.log("abcd")
 			$.ajax({
 	            type: 'POST',
 	            url: '/posts',

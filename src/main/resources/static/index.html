@@ -8,10 +8,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>게 시 판 </title>
   </head>
   <body>
-    <h1>Hello6 in static, world!6</h1>
+   
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
      <a class="navbar-brand" href="#">goneone</a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,10 +31,10 @@
        </form>
      </div>
    </nav> 
-    
-    <h1>게시판이 갑자기 또오.. </h1>
+ 
     <div class="col-md-12">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#savePostsModal">글 등록</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updatePostsModal">글 수정</button>
         <br/>
         <br/>
 
@@ -61,13 +61,76 @@
         </table>
     </div>
  	
+ 	<!-- Modal 영역 -->
+    <div class="modal fade" id="savePostsModal" tabindex="-1" role="dialog" aria-labelledby="savePostsLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="savePostsLabel">게시글 등록</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="title">제목</label>
+                            <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요">
+                        </div>
+                        <div class="form-group">
+                            <label for="author"> 작성자 </label>
+                            <input type="text" class="form-control" id="author" placeholder="작성자를 입력하세요">
+                        </div>
+                        <div class="form-group">
+                            <label for="content"> 내용 </label>
+                            <textarea class="form-control" id="content" placeholder="내용을 입력하세요"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary" id="btn-save">등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-12">
+	    <div class="col-md-4">
+	        <form>
+	            <div class="form-group">
+	                <label for="title">글 번호</label>
+	                <input type="text" class="form-control" id="id" value="{{post.id}}" readonly>
+	            </div>
+	            <div class="form-group">
+	                <label for="title">제목</label>
+	                <input type="text" class="form-control" id="title" value="{{post.title}}">
+	            </div>
+	            <div class="form-group">
+	                <label for="author"> 작성자 </label>
+	                <input type="text" class="form-control" id="author" value="{{post.author}}" readonly>
+	            </div>
+	            <div class="form-group">
+	                <label for="content"> 내용 </label>
+	                <textarea class="form-control" id="content">{{post.content}}</textarea>
+	            </div>
+	        </form>
+	        <a href="/" role="button" class="btn btn-secondary">취소</a>
+	        <button type="button" class="btn btn-primary" id="btn-update">수정 완료</button>
+	        <button type="button" class="btn btn-danger" id="btn-delete">삭제</button>
+	    </div>
+	</div>
+    
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="/js/lib/jquery.min.js"></script>
+    <script src="/js/lib/bootstrap.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
+      -->
     <!--custom js 추가-->
-    <!-- <script src="/js/app/main.js"></script> -->
+    <script src="/js/app/main.js"></script>
   </body>
 </html>
