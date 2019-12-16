@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 @Service
 public class PostsService {
-    private PostsRepository postsRepository;
+    private final PostsRepository postsRepository;
 
     @Transactional
     public Long save(PostsSaveRequestDto dto){

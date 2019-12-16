@@ -25,6 +25,6 @@ public class WebControllerTest {
         String body = this.restTemplate.getForObject("/", String.class);
 
         //then
-        assertThat(body).contains("spring");
+        assertThat(body).contains("제목");
     }
 }
