@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kuyt1819.webservice.dto.posts.PostsSaveRequestDto;
+import com.kuyt1819.webservice.dto.PostsSaveRequestDto;
 import com.kuyt1819.webservice.service.PostsService;
 
 import lombok.RequiredArgsConstructor;
@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {
-	
+
 	private final PostsService postsService;
 	
 	@PutMapping("/api/v1/posts")
@@ -20,5 +20,5 @@ public class PostsApiController {
 		return postsService.save(requestDto);
 	}
 	
-	
+
 }

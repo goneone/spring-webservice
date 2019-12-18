@@ -1,8 +1,8 @@
 package com.kuyt1819.webservice.service;
 
 import com.kuyt1819.webservice.domain.posts.PostsRepository;
-import com.kuyt1819.webservice.dto.posts.PostsMainResponseDto;
-import com.kuyt1819.webservice.dto.posts.PostsSaveRequestDto;
+import com.kuyt1819.webservice.dto.PostsListResponseDto;
+import com.kuyt1819.webservice.dto.PostsSaveRequestDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,9 +21,9 @@ public class PostsService {
     }
 
     @Transactional(readOnly = true)
-    public List<PostsMainResponseDto> findAllDesc() {
-        return postsRepository.findAllDesc()
-                .map(PostsMainResponseDto::new)
+    public List<PostsListResponseDto> findAllDesc() {
+        return postsRepository.findAllDesc().stream()
+                .map(PostsListResponseDto::new)
                 .collect(Collectors.toList());
     }
 }
