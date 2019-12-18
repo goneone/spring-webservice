@@ -1,4 +1,4 @@
-package com.kuyt1819.webservice.dto;
+package com.kuyt1819.webservice.web.dto;
 
 import com.kuyt1819.webservice.domain.posts.Posts;
 import lombok.Getter;
@@ -6,7 +6,6 @@ import lombok.Getter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
-
 
 
 @Getter

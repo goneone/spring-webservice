@@ -1,4 +1,4 @@
-package com.kuyt1819.webservice.dto;
+package com.kuyt1819.webservice.web.dto;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
