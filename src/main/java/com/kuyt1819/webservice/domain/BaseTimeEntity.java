@@ -10,7 +10,7 @@ import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
 @Getter
-@MappedSuperclass
+@MappedSuperclass //JPA Entity 클래스들이 BaseTimeEntity을 상속할 경우 필드들을 컬럼으로 인식하도록 함
 @EntityListeners(AuditingEntityListener.class)
 public abstract class BaseTimeEntity {
 

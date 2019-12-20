@@ -27,14 +27,6 @@ public class WebController {
         return "index";
     }
 
-
-    @GetMapping("/")
-    public String main(Model model) {
-        model.addAttribute("posts", postsService.findAllDesc());
-
-        System.out.println("★★★★★★★★★★");
-        System.out.println(postsService.findAllDesc().toString());
-        return "index";
     }
 
 
@@ -45,4 +37,3 @@ public class WebController {
         return "main";
     }
     */
-}
