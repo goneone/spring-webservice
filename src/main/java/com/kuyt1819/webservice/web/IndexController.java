@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RequiredArgsConstructor
 @Controller
 public class IndexController {
-
+    //화면 보여주는 컨트롤러
     private final PostsService postsService;
 
     @GetMapping("/")
