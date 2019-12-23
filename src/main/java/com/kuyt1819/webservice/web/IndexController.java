@@ -1,11 +1,9 @@
 package com.kuyt1819.webservice.web;
 
 import com.kuyt1819.webservice.config.auth.dto.SessionUser;
-import com.kuyt1819.webservice.domain.user.User;
 import com.kuyt1819.webservice.service.PostsService;
 import com.kuyt1819.webservice.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
