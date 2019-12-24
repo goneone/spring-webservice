@@ -17,6 +17,8 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpSession;
 import java.util.Collections;
 
+
+//구글 로그인 이후 가져온 사용자의 정보 등을 기반으로 가입 및 정보 수정, 세션 저장 등의 기능을 하는 클래스
 @RequiredArgsConstructor
 @Service
 public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User> {
@@ -28,7 +30,9 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         OAuth2UserService delegate = new DefaultOAuth2UserService();
         OAuth2User oAuth2User = delegate.loadUser(userRequest);
 
+        //registrationId == 현재 로그인 진행 중인 서비스를 구분하는 코드. 구글 로그인인지, 네이버 로그인인지,카카오 로그인인지 구분
         String registrationId = userRequest.getClientRegistration().getRegistrationId();
+        //userNameAttributeName == OAuth2 로그인 진행 시 키가 되는 필드 값 Primary key와 같은 의미
         String userNameAttributeName = userRequest.getClientRegistration().getProviderDetails()
                 .getUserInfoEndpoint().getUserNameAttributeName();
 
