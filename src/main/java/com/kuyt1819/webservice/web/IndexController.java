@@ -1,5 +1,6 @@
 package com.kuyt1819.webservice.web;
 
+import com.kuyt1819.webservice.config.auth.LoginUser;
 import com.kuyt1819.webservice.config.auth.dto.SessionUser;
 import com.kuyt1819.webservice.service.PostsService;
 import com.kuyt1819.webservice.web.dto.PostsResponseDto;
@@ -18,10 +19,8 @@ public class IndexController {
     private final PostsService postsService;
     private final HttpSession httpSession;
     @GetMapping("/")
-    public String index(Model model) { //model == 서버 템플릿엔진에서 사용할 수 있는 객체를 저장할 수 있다. 여기서는 postsService.findAllDesc()로 가져온 결과를 posts로 index.mustache로 전달
+    public String index(Model model, @LoginUser SessionUser user) { //model == 서버 템플릿엔진에서 사용할 수 있는 객체를 저장할 수 있다. 여기서는 postsService.findAllDesc()로 가져온 결과를 posts로 index.mustache로 전달
         model.addAttribute("posts", postsService.findAllDesc());
-
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
 
         if(user != null) {
             model.addAttribute("userName", user.getName());
