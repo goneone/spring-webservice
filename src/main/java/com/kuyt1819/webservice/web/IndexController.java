@@ -14,10 +14,11 @@ import javax.servlet.http.HttpSession;
 
 @RequiredArgsConstructor
 @Controller
-public class IndexController {
-    //화면 보여주는 컨트롤러
+public class IndexController { //화면 보여주는 컨트롤러
     private final PostsService postsService;
     private final HttpSession httpSession;
+
+
     @GetMapping("/")
     public String index(Model model, @LoginUser SessionUser user) { //model == 서버 템플릿엔진에서 사용할 수 있는 객체를 저장할 수 있다. 여기서는 postsService.findAllDesc()로 가져온 결과를 posts로 index.mustache로 전달
         model.addAttribute("posts", postsService.findAllDesc());
@@ -27,12 +28,13 @@ public class IndexController {
         }
         return "index";
     }
-
+    //화면 보여주기
     @GetMapping("/posts/save")
     public String postsSave() {
         return "posts-save";
     }
 
+    //글 업데이트
     @GetMapping("/posts/update/{id}")
     public String postsUpdate(@PathVariable Long id, Model model) {
         PostsResponseDto dto = postsService.findById(id);
