@@ -17,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class PostsRepositoryTest {
 
     @Autowired //스프링이 관리하는 빈을 주입 받는다
-    PostsRepository postsRepository;
+    PostsRepository postsRepository;  //
 
     @After //Junit에서 단위 테스트가 끝날 때마다 수행되는 메소드를 지정 ,보통은 배포 전 전체 테스트를 수행할 때 테스트간 데이터 침범을 막기 위해 사용한다
     public void cleanup() {
