@@ -24,9 +24,9 @@ before_deploy:
 
 deploy:
   - provider: s3
-    access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
+    access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값b
     secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
-    bucket: freelec-springboot-build-goneone # 6-3-3에서 생성한 S3 버킷 a
+    bucket: freelec-springboot-build-goneone # 6-3-3에서 생성한 S3 버킷 aaaa
     region: ap-northeast-2
     skip_cleanup: true
     acl: private
@@ -54,5 +54,5 @@ deploy:
 notifications:
   email:
     recipients:
-      - kuyt1819@gmail.com 
+      - k24u2001@naver.com
             
