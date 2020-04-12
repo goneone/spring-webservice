@@ -34,6 +34,10 @@ public class IndexController { //화면 보여주는 컨트롤러
         return "posts-save";
     }
 
+    @GetMapping("/register")
+    public String register() {
+        return "test3";
+    }
     //글 업데이트
     @GetMapping("/posts/update/{id}")
     public String postsUpdate(@PathVariable Long id, Model model) {
