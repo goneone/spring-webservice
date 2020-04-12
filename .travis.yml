@@ -34,7 +34,7 @@ deploy:
     region: ap-northeast-2
     skip_cleanup: true
     acl: private
-    local_dir: deploy
+    local_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
     on:
       repo: goneone/spring-webservice #Github 주소
@@ -58,5 +58,5 @@ deploy:
 notifications:
   email:
     recipients:
-      - k24u2001@naver.com
+      - kuyt1819@gmail.com
             
